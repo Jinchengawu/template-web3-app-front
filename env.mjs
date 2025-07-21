@@ -1,3 +1,13 @@
+/*
+ * @Author: dreamworks.cnn@gmail.com
+ * @Date: 2025-07-21 14:33:25
+ * @LastEditors: dreamworks.cnn@gmail.com
+ * @LastEditTime: 2025-07-21 15:00:11
+ * @FilePath: /template-web3-app-front/env.mjs
+ * @Description:
+ *
+ * Copyright (c) 2025 by ${git_name_email}, All Rights Reserved.
+ */
 import { createEnv } from "@t3-oss/env-nextjs"
 import { z } from "zod"
 
@@ -8,29 +18,29 @@ export const env = createEnv({
       .string()
       .min(32)
       .default("complex_password_at_least_32_characters_long"),
-    DATABASE_URL: z.string().url().optional(),
+    DATABASE_URL: z.string().optional(),
     // Comma separated list of Ethereum addresses, accepts optinal whitespace after comma
     APP_ADMINS: z
       .string()
       .regex(/^(0x[a-fA-F0-9]{40}( *, *0x[a-fA-F0-9]{40})* *)*$/)
       .optional(),
-    DISCO_API_KEY: z.string().min(1).optional(),
-    OPENAI_API_KEY: z.string().min(1).optional(),
-    ETHERSCAN_API_KEY: z.string().min(1).optional(),
-    ETHERSCAN_API_KEY_OPTIMISM: z.string().min(1).optional(),
-    ETHERSCAN_API_KEY_ARBITRUM: z.string().min(1).optional(),
-    ETHERSCAN_API_KEY_POLYGON: z.string().min(1).optional(),
-    MORALIS_API_KEY: z.string().min(1).optional(),
-    GITCOIN_PASSPORT_SCORER_ID: z.string().min(1).optional(),
-    GITCOIN_PASSPORT_API_KEY: z.string().min(1).optional(),
+    DISCO_API_KEY: z.string().optional(),
+    OPENAI_API_KEY: z.string().optional(),
+    ETHERSCAN_API_KEY: z.string().optional(),
+    ETHERSCAN_API_KEY_OPTIMISM: z.string().optional(),
+    ETHERSCAN_API_KEY_ARBITRUM: z.string().optional(),
+    ETHERSCAN_API_KEY_POLYGON: z.string().optional(),
+    MORALIS_API_KEY: z.string().optional(),
+    GITCOIN_PASSPORT_SCORER_ID: z.string().optional(),
+    GITCOIN_PASSPORT_API_KEY: z.string().optional(),
   },
   client: {
     NEXT_PUBLIC_USE_PUBLIC_PROVIDER: z.enum(["true", "false"]).default("true"),
     NEXT_PUBLIC_PROD_NETWORKS_DEV: z.enum(["true", "false"]).default("false"),
-    NEXT_PUBLIC_ALCHEMY_API_KEY: z.string().min(1).optional(),
-    NEXT_PUBLIC_INFURA_API_KEY: z.string().min(1).optional(),
-    NEXT_PUBLIC_LIVEPEER_API_KEY: z.string().min(1).optional(),
-    NEXT_PUBLIC_SITE_URL: z.string().url().optional(),
+    NEXT_PUBLIC_ALCHEMY_API_KEY: z.string().optional(),
+    NEXT_PUBLIC_INFURA_API_KEY: z.string().optional(),
+    NEXT_PUBLIC_LIVEPEER_API_KEY: z.string().optional(),
+    NEXT_PUBLIC_SITE_URL: z.string().optional(),
     NEXT_PUBLIC_WC_PROJECT_ID: z.string().min(1),
   },
   runtimeEnv: {

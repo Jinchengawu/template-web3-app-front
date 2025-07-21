@@ -32,7 +32,7 @@
   },
   "engines": {
     "npm": ">=7.0.0",
-    "node": ">=18.0.0"
+    "node": ">=20.19.0"
   },
   "packageManager": "pnpm@7.1.8",
   "dependencies": {
@@ -130,6 +130,7 @@
     "@typescript-eslint/parser": "^5.59.11",
     "@wagmi/cli": "^2.1.4",
     "autoprefixer": "^10.4.13",
+    "clean-webpack-plugin": "^4.0.0",
     "concurrently": "^8.2.0",
     "eslint": "8.30.0",
     "eslint-config-next": "14.0.3",

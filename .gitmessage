@@ -1,0 +1,31 @@
+# <type>[optional scope]: <description>
+# 
+# [optional body]
+# 
+# [optional footer(s)]
+#
+# 类型说明：
+# feat: 新功能
+# fix: 修复 bug
+# docs: 文档更新
+# style: 代码格式调整
+# refactor: 代码重构
+# perf: 性能优化
+# test: 测试相关
+# chore: 构建过程或辅助工具变动
+# ci: CI/CD 相关
+# build: 构建系统或外部依赖变动
+# revert: 回滚之前的 commit
+#
+# 示例：
+# feat(auth): add OAuth2 login support
+# fix(api): resolve user authentication issue
+# docs(readme): update installation instructions
+# style: format code according to prettier rules
+# refactor(components): extract reusable button component
+# perf(database): optimize user query performance
+# test(api): add unit tests for user endpoints
+# chore: update dependencies to latest versions
+# ci: add automated testing workflow
+# build: update webpack configuration
+# revert: revert previous commit due to breaking changes 

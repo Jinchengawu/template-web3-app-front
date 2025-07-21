@@ -1,0 +1,93 @@
+# Cursor AI 配置规则
+
+## Git Commit Message 生成规则
+
+当使用 "Generate Commit Message" 功能时，请严格遵循 Conventional Commits 规范，并且**必须使用中英文双语**书写：
+
+### 语言要求
+- **必须同时包含中文和英文描述**
+- 中文用于详细说明变更内容
+- 英文用于简洁的技术描述
+- 格式：`<type>[optional scope]: <英文描述> - <中文描述>`
+
+### Commit Message 格式
+```
+<type>[optional scope]: <description>
+
+[optional body]
+
+[optional footer(s)]
+```
+
+### Type 类型（必需）
+- `feat`: 新功能
+- `fix`: 修复 bug
+- `docs`: 文档更新
+- `style`: 代码格式调整（不影响代码运行）
+- `refactor`: 代码重构
+- `perf`: 性能优化
+- `test`: 测试相关
+- `chore`: 构建过程或辅助工具的变动
+- `ci`: CI/CD 相关
+- `build`: 构建系统或外部依赖的变动
+- `revert`: 回滚之前的 commit
+
+### Scope 范围（可选）
+- 指定影响的范围，如：`feat(auth)`, `fix(api)`, `docs(readme)`
+
+### Description 描述（必需）
+- 使用祈使句，现在时态
+- 首字母小写
+- 不加句号
+- 不超过 50 个字符
+- **必须包含中英文双语描述**
+- 格式：`<英文描述> - <中文描述>`
+- 英文部分简洁明了，中文部分详细说明
+
+### Body 正文（可选）
+- 详细描述变更的原因和影响
+- 使用祈使句，现在时态
+- 每行不超过 72 个字符
+- **建议同时提供中英文说明**
+- 可以先写中文详细说明，再写英文技术细节
+
+### Footer 脚注（可选）
+- 用于引用相关 issue
+- 格式：`Fixes #123`, `Closes #456`
+
+### 示例
+```
+feat(auth): add OAuth2 login support - 添加OAuth2登录支持
+
+Implement OAuth2 authentication flow with Google and GitHub providers.
+Add new login components and update user session management.
+实现OAuth2认证流程，支持Google和GitHub提供商登录
+添加新的登录组件并更新用户会话管理
+
+Closes #123
+Fixes #456
+```
+
+```
+fix(api): resolve user authentication timeout - 修复用户认证超时问题
+
+Fix authentication timeout by increasing session duration and adding retry logic.
+修复认证超时问题，通过增加会话时长和添加重试逻辑
+
+Fixes #789
+```
+
+```
+docs(readme): update installation guide - 更新安装指南
+
+Add detailed step-by-step installation instructions and troubleshooting section.
+添加详细的逐步安装说明和故障排除部分
+```
+
+### 生成规则
+1. 分析代码变更的类型和影响范围
+2. 选择合适的 type 和 scope
+3. **编写中英文双语 description**：`<英文描述> - <中文描述>`
+4. 必要时添加中英文双语 body 和 footer
+5. 确保符合项目现有的 commit 规范
+6. **严格遵循中英文双语要求，不得只使用单一语言** 

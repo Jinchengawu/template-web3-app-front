@@ -28,5 +28,15 @@
   },
   "typescript.tsdk": "node_modules/.pnpm/typescript@4.9.4/node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "prettier.prettierPath": "./node_modules/prettier" // Workaround fix for prettier force checking node modules.
+  "prettier.prettierPath": "./node_modules/prettier", // Workaround fix for prettier force checking node modules.
+
+  // Git 相关配置
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+
+  // Commit 消息相关配置
+  "git.inputValidation": "always",
+  "git.inputValidationLength": 72,
+  "git.inputValidationSubjectLength": 50
 }
